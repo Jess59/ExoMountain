@@ -1,10 +1,4 @@
-/*******************************
-Le container nous permet de centrer
-notre design dans la page.
-On en profite pour centrer les
-textes et les passer en blanc pour
-la totalité de la page.
-*******************************/
+
 *{
     margin: 0 ;
     padding: 0;
