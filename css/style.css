@@ -7,6 +7,31 @@
 /***header ***/
 header {
     height: 100vh; /*100 view port height = toute la hauteur de l'écran*/
-    background: url("../images/montagne.jpg") fixed bottom;
+    background: url("../images/montagne.jpg") center bottom; /*garde le centre bes de mon image quand on change l'écran de taille*/
     background-size: cover; /*prends toute l'écran*/
+}
+
+header nav ul{
+    height: 50px; /*pour décaler les élements en bas*/
+    display: flex; /*mermet aux enfants d'etre les uns à cotê des autres*/
+    justify-content: flex-end; /*repartition su la largeur*/
+    align-items: center; /*pour centrer les elements*/
+    list-style: none; /*enlève les vignettes*/
+}
+header nav ul li {
+    margin: 0 20px;
+}
+/*Modifie les boutons*/
+header nav ul li a {
+    text-decoration: none;/*enlève le soulignement*/
+    color: white; /*change la couleur du texte*/
+    font-family: Arial, Helvetica, sans-serif; /*Change la famille de tipograohie*/
+    font-weight: bold; /*change la  graisse de la typo*/
+    text-transform: uppercase; /*passe le texte en majuscule*/
+}
+
+header nav ul li a:hover {
+    border-bottom: 2px solid white;
+    opacity: 0.5;
+    
 }
