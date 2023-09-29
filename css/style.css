@@ -7,6 +7,6 @@
 /***header ***/
 header {
     height: 100vh; /*100 view port height = toute la hauteur de l'écran*/
-    background: url("../ExoMountain/");
+    background: url("../images/montagne.jpg");
     background-size: cover; /*prends toute l'écran*/
 }
