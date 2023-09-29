@@ -4,11 +4,22 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth; /**ajout un effet au scroll vers les a ()*/
+}
+
 /***header ***/
 header {
     height: 100vh; /*100 view port height = toute la hauteur de l'écran*/
-    background: url("../images/montagne.jpg") center bottom; /*garde le centre bes de mon image quand on change l'écran de taille*/
+    background: url("../images/montagne.jpg") center bottom fixed; /*garde le centre bes de mon image quand on change l'écran de taille*/
     background-size: cover; /*prends toute l'écran*/
+}
+
+header nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 header nav ul{
@@ -21,6 +32,9 @@ header nav ul{
 header nav ul li {
     margin: 0 20px;
 }
+/**Fin header**/
+
+
 /*Modifie les boutons*/
 header nav ul li a {
     text-decoration: none;/*enlève le soulignement*/
@@ -31,7 +45,64 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    border-bottom: 2px solid white;
-    opacity: 0.5;
+    border-bottom: 2px solid black; /*Ajoute une bordure en bas au */
+    opacity: 0.5; /*va créer un opacité au survol*/
+    color:black; /**/
+
+}
+
+header div {
+    height: calc(100vh - 50px); /*pour que la div occupe le reste de l'écran on retire les 50px de la hauteeur de la nav
+    au 100 vh (hauteur complète)*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    padding:  100px 0; /*ajoute du rembourrage (marge interne) à la section*/
     
+}
+
+section h2 {
+    text-align: center; /*permet de centrer le titre*/
+    text-transform: capitalize;/*va mettre une majuscule a tus les titres h2*/
+}
+section > div { /*selectionne les div de premier niveau*/
+    display: flex; /*permets au divs enfants de se mettre les une acote des autres*/
+    justify-content: center; /*permets de centrer les div enfant*/
+}
+
+section>div div { /*selectionne les div enfants des div du premier niveau*/
+    width: 150px;
+    height: 150px;
+    background-color: teal;
+    margin: 50px; /*Eloigne les divs les uns des autres*/
+    transition: width  0.5s cubic-bezier(.25,1.72,.51,-0.64) 1s;
+}
+
+section>div>:hover{
+    background: mistyrose;
+    width: 190px;
+}
+section:nth-of-type(2){
+    background: teal;
+}
+
+section:nth-of-type(2)>div>div {
+    background: white;
+}
+
+/**foooter**/
+footer{
+    height: 400px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    color: white;
+    font-size: xx-large;
 }
